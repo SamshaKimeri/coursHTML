@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+/* Element avec l'ID orange */
+#orange{
+    color: orange;
+    margin: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    position: fixed;
+   
+}
+/* l'élement avec la Class bleu */
+.bleu{
+    color: blue;
+}
+/* L'élément avec une Class verte */
+.vert{
+    color: green;
+}

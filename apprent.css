@@ -21,7 +21,7 @@ h2 {
     text-shadow: 1px 1px 4px violet;
     text-decoration: underline;
 }
-p, li {
+p, li, a{
     margin-left: 30px;
    
 }
@@ -31,6 +31,24 @@ p, li {
 .ol {
     list-style-type:decimal-leading-zero;
 }
-a+p #different-link  {
+ #different-link a, #different-link p {
     color: green;
+    text-decoration: none;
 }
+#imgcover img{
+    height: 300px;
+    width: 300px;
+   
+}
+#imgext img{
+    height: 300px;
+    width: 300px;
+}
+#display p {
+    width: 40%;
+    display: inline-flex;
+   
+    border: 2px solid black;
+    
+}
+

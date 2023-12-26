@@ -61,7 +61,7 @@
         <p><a href="https://www.wikipedia.org/">la home </a>de wikipedia</p>
     </section>
     <hr>
-    <section>
+    <section id="target-link">
         <h2>Les differents liens avec l'attribut target</h2>
         <ol>
         <li><span>_self</span>: est la valeur par défaut: la page cible s'ouvre dans le même emplacement que là où l'utilisateur a cliqué.</li>
@@ -87,7 +87,7 @@
         <h3 id="conclusion">Conclusion</h3>
     </section>
     <hr>
-    <section>
+    <section id="insertionMail">
         <h2>Insérer un mail</h2>
         <p>Ecrivez <a href="mailto:alexandra@gmail.com">moi</a></p>
     </section>
@@ -103,7 +103,12 @@
         <img src="https://ziggyfamily.com/cdn/shop/articles/chats-blancs-3.jpg?v=1637335268&width=1000" alt="un chat blanc">
         </div>
         <p>Insérer une vidéo en interne</p>
-        <video src="media/ishka1.mp4" autoplay>vidéo en mp4</video>
+        <div>
+        <!-- <video controls="controls" > -->
+            <video id="ishka" controls="controls" poster="media/ishkamagic.jpg" >
+                <source src="media/ishka1.mp4" type="video/mp4">
+                </video>
+        </div>
         <p>Insérer une vidéo en externe</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/dV98OtuO68Q?si=FsQ5_fzfKTCBGvDJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
@@ -117,8 +122,8 @@
         <h2>Les tableaux</h2>
         <p>Un paragraphe avant le tableau</p>
 
-        <table><caption>Liste</caption>
-            <tr>
+        <!-- <table><caption>Liste</caption> -->
+            <!-- <tr>
                 <th>Prénom</th>
                 <th>Nom</th>
                 <th>Sexe</th>
@@ -133,7 +138,7 @@
                 <td>Martin</td>
                 <td>Femme</td>
             </tr>
-        </table>
+        </table> -->
         <table><caption>Un tableau complexe</caption>
         <thead>
             <tr>
@@ -150,23 +155,135 @@
         <tbody>
             <tr>
                 <td rowspan="2">Pauline</td>
-                <td>Julie</td>
-                <td>Jeanne</td>
+                <td rowspan="2" >Julie</td>
+                <td rowspan="2" >Jeanne</td>
                 <td >Pauline@mail</td>
-                <td>Pauline2@mail</td>
-
+                
             </tr>
-            
+            <tr>
+                <td>Pauline2@mail</td>
+            </tr>
             <tr>
                 <td>Pierre</td>
                 <td colspan="2">Victor</td>
-                <td>pierre1@mail</td>
-                
+                <td>pierre1@mail</td>   
             </tr>
-            
-
         </tbody>
         </table>
+    </section>
+    <section>
+        <h2>Les formulaires</h2>
+        <form action="traitement.php" method="post">
+            <p>texte à l'interieur du formulaire</p>
+
+            <p><label for="pseudo">Votre pseudo</label> 
+            <input type="text"name="pseudo" id="pseudo" placeholder="Votre pseudo" size="50" maxlength="20"/></p>
+
+            <p><label for="ameliorer">Comment pensez-vous que je puisse améloirer mon site?</label><br>
+            <textarea name="ameliorer" id="ameliorer" cols="50" rows="10">Améliorer mon site !? Il est parfait ! Pourquoi apporter des modifications sur un tel chef-d'oeuvre !
+            </textarea></p>
+
+            <p><label for="mail">Saisissez votre e-mail</label>
+            <input type="email" name="email" id="email" placeholder="e-mail valide" size="50" maxlength="30"></p>
+
+            <p><label for="url">Rentrez l'URL</label>
+            <input type="url" name="url" id="url" placeholder="url valide" size="50" maxlength="30"></p>
+
+            <p><label for="tel">Saisissez votre numéro de téléphone</label>
+            <input type="tel" name="tel" id="tel" placeholder="Votre numéro" size="50" maxlength="30"></p>
+
+            <p><label for="number">Saisissez un nombre</label>
+            <input type="number" name="number" id="number"  min="1" max="100"></p>
+
+            <p>Audio seting :</p>
+            <p><label for="volume">volume</label><br>
+            <input type="range" name="volume" id="volume" min="1" max="100" value="30"></p>
+
+            <p><label for="cowbell">cowbell</label>
+            <input type="range" name="cowbell" id="cowbell" min="2" max="100" step="2" value="50"></p>
+
+            <p><label for="date">Date</label>
+            <input type="date"></p>
+
+            <p><label for="time">Time</label>
+            <input type="time"></p>
+
+            <p><label for="datetime">Choose your Date and Time</label>
+            <input type="datetime-local" name="datetime" id="datetime" min="25-12-2023T18:00" max="26-12-2023T00:00"></p>
+
+            <h3>Les Chekbox</h3>
+            <p>Cochez vos aliments préférés : <br>
+            <input type="checkbox" name="try" checked id="try">
+            <label for="try">Un essai pour case à cocher</label><br>
+            <input type="checkbox" name="frites"  id="frites">
+            <label for="frites">frites</label><br>
+            <input type="checkbox" name="steak" id="steak">
+            <label for="steak">steak</label><br>
+            <input type="checkbox" name="epinard" id="epinard">
+            <label for="epinard">Epinard</label><br>
+            <input type="checkbox" name="huitre" id="huitre">
+            <label for="huitre">Huitres</label></p>
+
+            <h3>Un choix unique dans la checkbox</h3>
+            <p>Veuillez indiquer la tranche d'âge dans laquelle vous vous situez : <br>
+                <input type="radio" name="age" value="less15" id="less15">
+                <label for="less15">Moins de 15 ans</label><br>
+                <input type="radio" name="age" value="medium15-25" id="medium15-25">
+                <label for="medium15-25">Entre 15 et 25 ans</label><br>
+                <input type="radio" name="age" value="medium25-40" id="medium25-40">
+                <label for="medium25-40">Entre 25 et 40 ans</label><br>
+                <input type="radio" name="age" value="more40" id="more40">
+                <label for="more40">Vous avez plus de 40 ans</label>
+            </p>
+
+            <h3>Les listes déroulantes</h3>
+            <p><label for="country">Dans quel pays habitez-vous?</label><br>
+            <select name="country" id="country">
+                <option value="france">France</option>
+                <option value="italie">Italie</option>
+                <option value="espagne">Espagne</option>
+                <option value="royaume Uni">Royaume Uni</option>
+                <option value="canada">Canada</option>
+                <option value="etats Unis">Etats Unis</option>
+                <option value="chine">Chine</option>
+                <option value="japon">Japon</option></select>
+            </p>
+
+            <h3>Regrouper des champs</h3>
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                    <label for="name">Nom</label>
+                    <input type="text" name="name" id="name"><br>
+
+                    <label for="firstname">Prénom</label>
+                    <input type="text" name="firstname" id="firstname"><br>
+
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email">
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre souhait</legend>
+                <p>Un souhait que vous voudriez exaucé : <br>
+                    <input type="radio" name="wish" value="rich" id="rich">
+                    <label for="rich">Devenir riche</label><br>
+
+                    <input type="radio" name="wish" value="famous" id="famous">
+                    <label for="famous">Etre célèbre</label><br>
+
+                    <input type="radio" name="wish" value="clever" id="clever">
+                    <label for="clever">Etre intelligent</label><br>
+
+                    <input type="radio" name="wish" value="other" id="other">
+                    <label for="other">Autre</label>
+                </p>
+
+                <p><label for="precision">Si vous avez coché autre, Veuillez préciser</label><br>
+                <textarea name="precision" id="precision" cols="30" rows="10">Veuillez décrire votre souhait</textarea></p>
+            </fieldset>
+
+            
+        </form>
     </section>
 
     </main>

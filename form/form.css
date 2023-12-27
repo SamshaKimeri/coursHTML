@@ -1,0 +1,20 @@
+/* Styles par défaut pour tous les écrans */
+body {
+    font-size: 16px;
+  }
+  
+  /* Media Query pour les écrans plus larges */
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  /* Media Query pour les écrans encore plus larges */
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 20px;
+    }
+  }
+  
+  

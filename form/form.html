@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Les formulaires</title>
+</head>
+<body>
+    <header>Les formulaires</header>
+    <main>
+        <p>Le match commencera à <time datetime="2023-01-15T18:30">18h30</time> au stade principal.</p>
+
+        <!-- method="post" : envoie un grand nombre d'info
+            method="get" : limité à 255 caractères, les info seront envoyés dans l'adresse de la page http -->
+        <form action="traitement.php" method="post">
+            <p>texte à l'interieur du formulaire</p>
+
+            <p><label for="pseudo">Votre pseudo</label> 
+        <!-- placeholder="un message" : permet à l'utilisateur de savoir ce qu'il doit écrire
+             size="" : permet d'agrandir le champ d'écriture
+             maxlength="" : définit le nombre de caractère que le visiteur peut rentrer -->
+            <input type="text"name="pseudo" id="pseudo" placeholder="Votre pseudo" size="50" maxlength="20"/></p>
+
+        <!-- textarea : balise permet une zone multiligne avec cols="" et rows="" 
+              ou en CSS modifier la taille avec width et height-->
+            <p><label for="ameliorer">Comment pensez-vous que je puisse améloirer mon site?</label><br>
+            <textarea name="ameliorer" id="ameliorer" cols="50" rows="10">Améliorer mon site !? Il est parfait ! Pourquoi apporter des modifications sur un tel chef-d'oeuvre !
+            </textarea></p>
+
+            <p><label for="mail">Saisissez votre e-mail</label>
+            <input type="email" name="email" id="email" placeholder="e-mail valide" size="50" maxlength="30"></p>
+
+            <p><label for="url">Rentrez l'URL</label>
+            <input type="url" name="url" id="url" placeholder="url valide" size="50" maxlength="30"></p>
+
+            <p><label for="tel">Saisissez votre numéro de téléphone</label>
+            <input type="tel" name="tel" id="tel" placeholder="Votre numéro" size="50" maxlength="30"></p>
+
+        <!-- input type="number" : le champ s'affiche avec des flèches
+              on peut ajouter des attributs min="" : valeur minimale et max="" valeur max autorisée
+              et step="" : c'est le pas de déplacement par exemple un pas de 2 en 2 (0,2,4...) -->
+            <p><label for="number">Saisissez un nombre</label>
+            <input type="number" name="number" id="number"  min="1" max="100"></p>
+
+        <!-- input type="range" : ajoute un curseur aussi appelé slider
+              on peut ajouter les attributs min="", max="", step="" et
+              value="" : le curseur se placera automatiquement à une valeur définit par défaut-->
+            <p>Audio seting :</p>
+            <p><label for="volume">volume</label><br>
+            <input type="range" name="volume" id="volume" min="1" max="100" value="30"></p>
+
+            <p><label for="cowbell">cowbell</label><br>
+            <input type="range" name="cowbell" id="cowbell" min="2" max="100" step="2" value="50"></p>
+
+        <!-- input type="date"
+             Il existe différents type de champ : input type="week", input type="month" -->
+            <p><label for="date">Date</label>
+            <input type="date"></p>
+
+        <!-- input type="time" -->
+            <p><label for="time">Time</label>
+            <input type="time"></p>
+
+        <!-- input type="datetime" : affiche la date et l'heure 
+             on peut ajouter les attributs min="" et max="" -->
+            <p><label for="datetime">Choose your Date and Time</label>
+            <input type="datetime-local" name="datetime" id="datetime" min="25-12-2023T18:00" max="26-12-2023T00:00"></p>
+
+        <!-- input type="checkbox" : créé des cases à cocher -->
+            <h3>Les Chekbox</h3>
+            <p>Cochez vos aliments préférés : <br>
+            <input type="checkbox" name="try" checked id="try">  <!-- CHECKED : la case est cochée par défaut  -->
+            <label for="try">Un essai pour case à cocher</label><br>
+            <input type="checkbox" name="frites"  id="frites">
+            <label for="frites">frites</label><br>
+            <input type="checkbox" name="steak" id="steak">
+            <label for="steak">steak</label><br>
+            <input type="checkbox" name="epinard" id="epinard">
+            <label for="epinard">Epinard</label><br>
+            <input type="checkbox" name="huitre" id="huitre">
+            <label for="huitre">Huitres</label>
+            </p>
+
+        <!-- input type="radio" : on ne peut sélectionner qu'une case à cocher avec la valeur radio.
+             Pour le même groupe on utilise le même name="" mais la value="" change-->
+            <h3>Un choix unique dans la checkbox</h3>
+            <p>Veuillez indiquer la tranche d'âge dans laquelle vous vous situez : <br>
+                <input type="radio" name="age" value="less15" id="less15">
+                <label for="less15">Moins de 15 ans</label><br>
+                <input type="radio" name="age" value="medium15-25" id="medium15-25">
+                <label for="medium15-25">Entre 15 et 25 ans</label><br>
+                <input type="radio" name="age" value="medium25-40" id="medium25-40">
+                <label for="medium25-40">Entre 25 et 40 ans</label><br>
+                <input type="radio" name="age" value="more40" id="more40">
+                <label for="more40">Vous avez plus de 40 ans</label>
+            </p>
+
+        <!-- les listes déroulantes se font avec la balise <select>  </select> : début et fin de la liste
+             à l'interieur de la balise select on place la balise <option>  </option> (une par choix)
+             et un attribut value="" : pour identifier ce que l'utilisateur a choisi. -->
+            <h3>Les listes déroulantes</h3>
+            <p><label for="country">Dans quel pays habitez-vous?</label><br>
+            <select name="country" id="country">
+                <option value="france">France</option>
+                <option value="italie">Italie</option>
+                <option value="espagne">Espagne</option>
+                <option value="royaume Uni">Royaume Uni</option>
+                <option value="canada">Canada</option>
+                <option value="etats Unis">Etats Unis</option>
+                <option value="chine">Chine</option>
+                <option value="japon">Japon</option></select>
+            </p>
+
+            <!-- Pour organiser une liste déroulante on utilise optgroup
+                 dans la balise <select name="" on ajoute une option de groupe <optgroup>  </optgroup>
+                 optgroup label="le nom du goup" : permet de définir le nom du goupe
+                 Et dans optgroupe on met les option à choir <option value="le choix">Le choix</option>
+                 On a au final :
+                  label label
+                    select (ouvert)
+                        optgroup (ouvert)
+                            option option
+                            option option
+                        optgroup (fermé)
+                    select (fermé)-->
+            <h3>Les optgroup</h3>
+            <p><label for="pays">Dans quel pays vivez-vous ?</label><br>
+                <select name="pays" id="pays">
+                    <optgroup label="Europe">
+                        <option value="france">France</option>
+                        <option value="espagne">Espagne</option>
+                        <option value="italie">Italie</option>
+                        <option value="royaume uni">Royaume Uni</option>
+                    </optgroup>
+
+                    <optgroup label="Amérique">
+                        <option value="canada">Canada</option>
+                        <option value="etats unis">Etats-Unis</option>
+                    </optgroup>
+
+                    <optgroup label="Asie">
+                        <option value="chine">Chine</option>
+                        <option value="japon">Japon</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <!-- fieldset regroupe des éléments de formulaire 
+                 on l'utilise avec l'attribut legend pour ajouter un titre descriptif au goupe d'éléments du formulaire -->
+            <h3>Regrouper des champs</h3>
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                    <label for="name">Nom</label>
+                     <input type="text" name="name" id="name" autofocus><br><!--AUTOFOCUS le curseur sera placé sur le champ par défaut -->
+
+                    <label for="firstname">Prénom</label>
+                    <input type="text" name="firstname" id="firstname"><br>
+
+                    <label for="email">email</label>
+                     <input type="email" name="email" id="email" required> <!--REQUIRED rend le champs obligatoire-->
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre souhait</legend>
+                <p>Un souhait que vous voudriez exaucé : <br>
+                    <input type="radio" name="wish" value="rich" id="rich">
+                    <label for="rich">Devenir riche</label><br>
+
+                    <input type="radio" name="wish" value="famous" id="famous">
+                    <label for="famous">Etre célèbre</label><br>
+
+                    <input type="radio" name="wish" value="clever" id="clever">
+                    <label for="clever">Etre intelligent</label><br>
+
+                    <input type="radio" name="wish" value="other" id="other">
+                    <label for="other">Autre</label>
+                </p>
+
+                <p><label for="precision">Si vous avez coché autre, Veuillez préciser</label><br>
+                <textarea name="precision" id="precision" cols="20" rows="10">Veuillez décrire votre souhait</textarea></p>
+            </fieldset>
+
+            <h3>Le bouton d'envoi</h3>
+                    <input type="submit" value="Envoyer" id="envoyer">
+                    <input type="reset" value="Reset" id="reset">
+                   <input type="image"  src="patte.ico" width="50" height="50" id="image">
+                   <input type="button" value="button" id="button" >
+        </form>
+    </main>
+</body>
+</html>

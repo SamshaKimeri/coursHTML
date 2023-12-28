@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid > div {
+    background-color: gray;
+    border: solid 1px black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    column-gap: 20px; 
+}
+
+.grid2 > .child {
+    background-color: red;
+    border: solid 2px black;
+}
+
+.grid2 > .child2 {
+    background-color: violet;
+    border: solid 3px gold;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.child {
+    grid-column-start: 1;
+    grid-column-end:  3;
+    grid-row-start: 1;
+   
+    z-index: 1;
+    margin: 10px;
+}
+
+.child2 {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    grid-row-start: 1;
+    grid-row-end: span 4;
+}

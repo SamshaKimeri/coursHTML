@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: O;
+}
+
+.grid1 {
+    width: 800px;
+    height: 600px;
+    border: solid 2px black;
+    margin: auto;
+}
+
+.blue1 {
+    background-color: blue;
+}
+.purple {
+    background-color: purple;
+}
+.yellow {
+    background-color: yellow;
+    padding: 20 px;
+}
+.blue2 {
+    background-color: blue;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 20fr 3fr ;
+}
+
+.blue1 {
+    grid-column-start: 1;
+}
+.purple {
+    grid-row-start: 2;
+}
+.yellow {
+    grid-row-start: 3;
+    margin: 10px;
+}
+.blue2 {
+    grid-row-start: 4;
+}
+
+.grid2 {   
+    width: 800px;
+    height: 600px;
+    border: solid 2px black;
+    margin: auto;
+    color: aliceblue;
+}
+
+.violet {
+    background-color: blueviolet;
+}
+.bleu {
+    background-color: blue;
+}
+ .grisclair {
+    background-color: black;
+} 
+.red1, .red2, .red3, .red4 {
+    background-color: red;
+} 
+.yellow1, .yellow2, .yellow3, .yellow4 {
+    background-color: yellow;
+}
+.green1, .green2, .green3, .green4 {
+    background-color: green;
+}
+.brown1 , .brown2 , .brown3 , .brown4 {
+    background-color: brown;
+}
+.gris {
+    background-color: gray;
+}
+
+.grid2 {
+    display: grid;
+    text-align: center;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 4fr 4fr 4fr 4fr 2fr;
+    
+}
+.violet {
+    grid-column-start: 1;
+    grid-column-end: span 4;   
+}
+.bleu {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+}
+ /* .grisclair {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    grid-row-end: 3;
+    grid-row-end: span 6; 
+} */
+.red1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3; 
+    margin-top: 2%;
+    margin-left: 2%;
+    z-index: 1;
+}
+.red2 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+.red3 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+.red4 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.yellow1 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+.yellow2 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    margin: 2% 2% 0 1%;
+    
+}
+.yellow3 {
+    grid-column-start: 3;
+    grid-row-start: 4;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+.yellow4 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+    margin:1% 2% 0 1%;
+}

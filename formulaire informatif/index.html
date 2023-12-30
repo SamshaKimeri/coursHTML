@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire informatif</title>
+</head>
+<body>
+    <header>
+        <H1>FORMULAIRE INFORMATIF</H1>
+    </header>
+    <!-- barre de navigation -->
+    <nav>
+        <ul>
+            <li class="info">Vos informations :</li>
+            <li>Personnelle</li>
+            <li>Complémentaire</li>
+            <li>Promotion</li>
+        </ul>
+    </nav>
+    <main>
+    <form action="traitement.php" method="post">  
+        <!-- information personnelle -->
+        <section id="personal-information">
+            <h2>Information personnelle</h2>
+           <ul>
+            <li><label for="civility">Civilité * : </label>
+            <select name="civility" id="civility" required>
+                <option value="mademoiselle">Mademoiselle</option>
+                <option value="madame">Madame</option>
+                <option value="monsieur">Monsieur</option>
+                <option value="autre">Autre</option>
+            </select>
+            </li>
+            <li>
+                <label for="name">Nom * :</label>
+                <input type="text" name="name" id="name" placeholder="Votre Nom ici" size="50" maxlength="30" required>
+            </li>
+            <li>
+                <label for="firstname">Prénom * :</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Votre prénom ici" size="50" maxlength="30" required>
+            </li>
+            <li>
+                <label for="date">Date de naissance * :</label>
+                <input type="date" required>
+            </li>
+            <li>
+                <label for="tel">Numéro de téléphone fixe :</label>
+                <input type="tel" name="tel" id="tel">
+            </li>
+            <li>
+                <label for="tel">Numéro de téléphone portable * :</label>
+                <input type="tel" name="portable" id="portable" required>
+            </li>
+            <li>
+                <label for="numberstreet">Numéro de rue * :</label>
+                <input type="text" name="numberstreet" id="numberstreet" placeholder="N°" size="5" maxlength="3" required>
+                <label for="namestreet">Nom de rue * :</label>
+                <input type="text" name="namestreet" id="namestreet" placeholder="namestreet" required >
+            </li>
+            <li>
+                <label for="zipcode">Code postal * :</label>
+                <input type="text" name="zipcode" id="zipcode" placeholder="code postal" size="10" required>
+            </li>
+            <li>
+                <label for="town">Ville * :</label>
+                <input type="text" name="town" id="town" placeholder="Votre ville ici" required>
+            </li>
+            <li>
+                <label for="pseudo">Pseudo</label>
+                <input type="text" name=" pseudo" id="pseudo " placeholder="Entrer votre pseudo ici" required>
+            </li>
+            <li>
+                <label for="password">Mot de passe * :</label>
+                <input type="text" name="password" id="password" placeholder="Entrer votre mot de passe ici" size="30" maxlength="30" required>
+                <input type="submit" value="Soumettre" id="soumettre">
+                <input type="checkbox" name="souvenir" id="souvenir" checked>
+                <label for="souvenir">Se souvenir de moi</label>
+            </li>
+            </ul>    
+        </section>
+        <!-- information complémentaire -->
+        <section id="additional-information">
+            <h2>Information complémentaire</h2>
+            <p>Quel est votre niveau en developpement ? 
+                <input type="radio" name="beginner" id="beginner">
+                <label for="beginner">Débutant</label>
+                <input type="radio" name="junior" id="junior">
+                <label for="junior">Junior</label>
+                <input type="radio" name="expert" id="expert">
+                <label for="expert">Expert</label>
+            </p>
+            <p>Quel votre niveau de connaissance das les différents langages :</p>
+            <ul>
+                <li>
+                    <input type="range" name="html/css" id="html/css" value="1"><br>
+                    <label for="html/css">html/css </label>
+                </li>
+                <li>
+                    <input type="range" name="python" id="python" value="1"><br>
+                    <label for="python">Python</label>
+                </li>   
+                <li>
+                    <input type="range" name="php" id="php" value="1"><br>
+                    <label for="php">PHP</label>
+                </li>
+                <li>
+                    <input type="range" name="java" id="java" value="1"><br>
+                    <label for="java">java</label>
+                </li>
+                <li>
+                    <input type="range" name="nodejs" id="nodejs" value="1"><br>
+                    <label for="nodejs">nodejs</label>
+                </li>
+                <li>
+                    <input type="range" name="reactJs" id="reactJs" value="1"><br>
+                    <label for="reactJs">reactJs</label>
+                </li>
+                <li>
+                    <input type="range" name="c#" id="c#" value="1"><br>
+                    <label for="c#">c#</label>
+                </li>
+            </ul>
+            <p><label for="os">Sur quel Os travaillez-vous ?</label>
+                <select name="os" id="os">
+                    <option value="windows">Windows</option>
+                    <option value="chrome">Chrome OS</option>
+                    <option value="mac">Mac OS</option>
+                </select></p>
+        </section>
+        <!-- information promotion -->
+        <section id="information-promotion">
+            <h2>Information liées à la promotion</h2>
+            <ul>
+                <li><label for="date">promotion beweb</label>
+                    <input type="date" name="date" id="date">
+                    <label for="time"></label>
+                    <input type="time" name="time" id="time"></li>
+            </ul>
+            <p><label for="url">Merci de nous faire parvenir votre URL TD_I</label>
+                <input type="url" name="url" id="url" placeholder="URL">
+            </p>
+            <P><label for="question">Si vous avez des questions vous pouvez nous les laisser en commentaires ci-dessous :</label></P>
+                <textarea name="question" id="question" cols="60" rows="10"></textarea>
+            <p><input type="submit" name="Envoyer" id="envoyer"></p>
+        </section>
+    </form>
+    </main>
+<footer>
+    
+</footer>
+    
+</body>
+</html>

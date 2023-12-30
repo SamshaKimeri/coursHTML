@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(77, 137, 190);
+    text-align: center;
+}
+nav {
+    width: 100vw;
+    height: 10vh;
+    background-color: aqua;
+    display: block;
+    
+    
+}
+.info {
+    float: left;
+    padding-left: 20px;
+}
+nav > ul > li {
+    float: right; 
+    list-style: none;
+    text-align: center;
+    padding-right: 100px; 
+    padding-top: 20px;
+}
+main{
+    width: 70vw;
+    height: auto;
+    border: 2px solid slateblue;
+    margin: auto;
+}

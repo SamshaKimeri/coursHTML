@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#first{    
+    width: 800px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: 1fr 8fr;
+   
+    margin: auto;
+    color: aliceblue;
+
+}   
+
+.red {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: span2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blue1 {
+    background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start :2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.blue2 {
+    background-color: blue;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start : 2 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+} 
+.blanc {
+    background-color: wheat;
+    display: grid;
+    padding: 2px;
+    gap: 2px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:  6fr 2fr;
+    
+               
+}
+.Z1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.Z2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.Z3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.Z4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.Z5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.zb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    grid-column: 1 / 6;
+    grid-row: 2;
+}
+

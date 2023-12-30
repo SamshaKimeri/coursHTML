@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 0.5fr 8fr 0.5fr;
+    grid-template-areas: 
+    "logo logo logo logo"
+    "nav nav nav nav"
+    "feature content content content "
+    "footer footer footer footer"
+    ;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation{
+    grid-area: nav;
+    background-color: palevioletred;
+}
+
+.content{
+    grid-area: content;
+    background-color: gray;
+}
+
+.feature{
+    grid-area: feature;
+    background-color: yellow;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgb(77, 67, 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

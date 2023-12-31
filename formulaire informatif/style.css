@@ -1,35 +1,99 @@
 body{
     margin: 0;
     padding: 0;
+    width: 100vw;
 }
 header{
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     background-color: rgb(77, 137, 190);
     text-align: center;
 }
-nav {
-    width: 100vw;
-    height: 10vh;
-    background-color: aqua;
-    display: block;
-    
-    
+h1 {
+    margin: 0;
 }
-.info {
-    float: left;
+/* barre de navigation */
+nav {
+    height: 10vh;
+    background-color: aqua; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;   
+}
+nav p {
+    font-style: italic;
+}
+#nav-ul {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+}
+#nav-ul a {
+    text-decoration: none;
+}
+#nav-ul li :hover {
+    background-color: rgb(230, 200, 110);
+    border-radius: 10px;
+}
+/* main */
+main{
+    width: 80vw;
+    height: auto;
+    margin: auto;
+}
+/* information personnelle */
+#personal-information {
+    background-color: beige;
+    border: 2px solid black;
+}
+#personnelle {
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+}
+#personal-information li {
+    padding: 10px;
+}
+#personal-information  input {
+    border-radius: 10px;
+    background-color: rgb(205, 179, 179);
+}
+/* information complémentaire */
+#additional-information {
+    background-color: aqua;
+    border: 2px solid black;
+}
+#complementaire {
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+}
+/* information promotion */
+#information-promotion {
+    background-color: blanchedalmond;
+    border: 2px solid black;
+}
+#information-promotion p {
     padding-left: 20px;
 }
-nav > ul > li {
-    float: right; 
-    list-style: none;
+#promotion {
     text-align: center;
-    padding-right: 100px; 
-    padding-top: 20px;
+    text-decoration: underline;
 }
-main{
-    width: 70vw;
-    height: auto;
-    border: 2px solid slateblue;
-    margin: auto;
+#submit input {
+    border-radius: 10px;
+    
+}
+#submit-div {
+   
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#questions {
+    
+    display: flex;
+    justify-content: center;
 }

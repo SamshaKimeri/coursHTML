@@ -12,18 +12,18 @@
     </header>
     <!-- barre de navigation -->
     <nav>
-        <ul>
-            <li class="info">Vos informations :</li>
-            <li>Personnelle</li>
-            <li>Complémentaire</li>
-            <li>Promotion</li>
+        <p>Vos informations :</p>
+        <ul id="nav-ul">
+            <li><a href="#personnelle">Personnelle</a></li>
+            <li><a href="#complementaire">Complémentaire</a></li>
+            <li><a href="#promotion">Promotion</a></li>
         </ul>
     </nav>
     <main>
     <form action="traitement.php" method="post">  
         <!-- information personnelle -->
         <section id="personal-information">
-            <h2>Information personnelle</h2>
+            <h2 id="personnelle">Information personnelle</h2>
            <ul>
             <li><label for="civility">Civilité * : </label>
             <select name="civility" id="civility" required>
@@ -82,7 +82,7 @@
         </section>
         <!-- information complémentaire -->
         <section id="additional-information">
-            <h2>Information complémentaire</h2>
+            <h2 id="complementaire">Information complémentaire</h2>
             <p>Quel est votre niveau en developpement ? 
                 <input type="radio" name="beginner" id="beginner">
                 <label for="beginner">Débutant</label>
@@ -131,7 +131,7 @@
         </section>
         <!-- information promotion -->
         <section id="information-promotion">
-            <h2>Information liées à la promotion</h2>
+            <h2 id="promotion">Information liées à la promotion</h2>
             <ul>
                 <li><label for="date">promotion beweb</label>
                     <input type="date" name="date" id="date">
@@ -141,9 +141,13 @@
             <p><label for="url">Merci de nous faire parvenir votre URL TD_I</label>
                 <input type="url" name="url" id="url" placeholder="URL">
             </p>
-            <P><label for="question">Si vous avez des questions vous pouvez nous les laisser en commentaires ci-dessous :</label></P>
-                <textarea name="question" id="question" cols="60" rows="10"></textarea>
-            <p><input type="submit" name="Envoyer" id="envoyer"></p>
+            <p><label for="question">Si vous avez des questions vous pouvez nous les laisser en commentaires ci-dessous :</label></P>
+            <div id="questions">
+                <textarea name="question" id="question" cols="60" rows="10"></textarea><br>
+            </div>
+            <div id="submit-div">
+            <input type="submit" name="Envoyer" id="envoyer">
+            </div>
         </section>
     </form>
     </main>

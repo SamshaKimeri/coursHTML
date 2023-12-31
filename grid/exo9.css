@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 500px;
+    height: auto;
+    margin: auto;
+}
+header {
+    background-color: blue;
+    height: 80px;
+    text-align: center;
+}
+nav {
+    background-color: yellow;
+    height:30px;
+    text-align: center;
+}
+#carrousel {
+    background-color: orangered;
+    height: 90px;
+    text-align: center;
+}
+#articles {
+    background-color: rgb(115, 216, 115);
+    height: 250px;
+    text-align: center;
+}
+#article {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+#article-1, #article-2, #article-3 {
+    background-color: green;
+    margin: 20px 20px;
+    padding: 50px 30px;
+    
+}
